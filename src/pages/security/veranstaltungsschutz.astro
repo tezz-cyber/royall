@@ -1,0 +1,25 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import ServiceDetailLayout from "../../components/ServiceDetailLayout.astro";
+
+const kicker = "Sicherheit für Ihre Veranstaltung";
+const title = "Veranstaltungsschutz";
+const intro = [
+    "Ob Firmenfeier, Messe oder Großveranstaltung: Sicherheit ist die Grundlage für einen reibungslosen Ablauf. Unser Veranstaltungsschutz sorgt für geschultes Sicherheitspersonal und durchdachte Sicherheitskonzepte.",
+    "Wir planen gemeinsam mit Ihnen das passende Sicherheitskonzept und stellen geschultes Personal für Einlasskontrolle, Ordnungsdienst und Objektschutz während der Veranstaltung bereit."
+  ];
+const features = [
+    { title: "Individuelle Sicherheitskonzepte", desc: "Abgestimmt auf Art und Größe Ihrer Veranstaltung." },
+    { title: "Einlass- und Zutrittskontrolle", desc: "Geordneter und sicherer Zugang für Gäste." },
+    { title: "Ordnungsdienst vor Ort", desc: "Geschultes Personal für einen reibungslosen Ablauf." },
+    { title: "Zusammenarbeit mit Behörden", desc: "Abstimmung mit Ordnungsamt und Rettungsdiensten bei Bedarf." }
+  ];
+const badge = "Neu für Royall";
+---
+<Layout title="Veranstaltungsschutz | Royall Service & Security">
+  <Header />
+  <ServiceDetailLayout kicker={kicker} title={title} intro={intro} features={features} badge={badge} />
+  <Footer />
+</Layout>

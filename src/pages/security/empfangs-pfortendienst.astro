@@ -1,0 +1,25 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import ServiceDetailLayout from "../../components/ServiceDetailLayout.astro";
+
+const kicker = "Der erste Eindruck zählt";
+const title = "Empfangs- und Pfortendienst";
+const intro = [
+    "Ein professioneller Empfang ist oft der erste Kontaktpunkt für Ihre Besucher und Geschäftspartner. Unser Empfangs- und Pfortendienst verbindet freundlichen Service mit zuverlässiger Zutrittskontrolle.",
+    "Wir übernehmen Anmeldung, Besucherlenkung und Zufahrtskontrolle und sorgen so für einen sicheren und gleichzeitig gastfreundlichen Empfang an Ihrem Standort."
+  ];
+const features = [
+    { title: "Freundlicher Empfang von Besuchern", desc: "Professioneller erster Eindruck für Ihr Unternehmen." },
+    { title: "Zutritts- und Zufahrtskontrolle", desc: "Sichere Steuerung des Personen- und Fahrzeugverkehrs." },
+    { title: "Besucherverwaltung", desc: "Anmeldung, Ausweisvergabe und Dokumentation." },
+    { title: "Individuelle Dienstzeiten", desc: "Abgestimmt auf Ihre Geschäfts- und Öffnungszeiten." }
+  ];
+const badge = "Neu für Royall";
+---
+<Layout title="Empfangs- und Pfortendienst | Royall Service & Security">
+  <Header />
+  <ServiceDetailLayout kicker={kicker} title={title} intro={intro} features={features} badge={badge} />
+  <Footer />
+</Layout>

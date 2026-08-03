@@ -1,0 +1,25 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import ServiceDetailLayout from "../../components/ServiceDetailLayout.astro";
+
+const kicker = "Vorbeugender Schutz bei erhöhtem Brandrisiko";
+const title = "Brandwache";
+const intro = [
+    "Bei bestimmten Arbeiten, etwa Schweiß- oder Trennarbeiten, oder in besonders brandgefährdeten Bereichen ist eine Brandwache oft gesetzlich vorgeschrieben oder dringend empfohlen. Unser geschultes Sicherheitspersonal übernimmt diese Aufgabe zuverlässig.",
+    "Wir überwachen die Arbeiten und die Umgebung während und nach den Tätigkeiten und sind im Ernstfall sofort einsatzbereit, um Schlimmeres zu verhindern."
+  ];
+const features = [
+    { title: "Überwachung während Brandgefahrarbeiten", desc: "Kontinuierliche Beobachtung während der Ausführung." },
+    { title: "Nachkontrolle nach Arbeitsende", desc: "Vermeidung von Spätentzündungen durch Glutnester." },
+    { title: "Geschultes Sicherheitspersonal", desc: "Kenntnisse im Umgang mit Brandschutzausrüstung." },
+    { title: "Dokumentation für Auftraggeber", desc: "Nachweisführung für Versicherung und Behörden." }
+  ];
+const badge = "Neu für Royall";
+---
+<Layout title="Brandwache | Royall Service & Security">
+  <Header />
+  <ServiceDetailLayout kicker={kicker} title={title} intro={intro} features={features} badge={badge} />
+  <Footer />
+</Layout>
