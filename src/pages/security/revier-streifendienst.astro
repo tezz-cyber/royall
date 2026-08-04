@@ -7,19 +7,38 @@ import ServiceDetailLayout from "../../components/ServiceDetailLayout.astro";
 const kicker = "Mobile Sicherheit für mehrere Objekte";
 const title = "Revier- und Streifendienst";
 const intro = [
-    "Nicht jedes Objekt benötigt durchgehende Vor-Ort-Präsenz. Unser Revier- und Streifendienst kontrolliert mehrere Objekte in einem festen Rhythmus und sorgt so für ein wirtschaftliches, aber wirksames Sicherheitskonzept.",
-    "Unsere mobilen Sicherheitskräfte fahren vereinbarte Kontrollpunkte regelmäßig ab und reagieren umgehend bei Auffälligkeiten oder Alarmauslösungen."
-  ];
+  "Nicht jedes Objekt benötigt durchgehende Vor-Ort-Präsenz. Unser Revier- und Streifendienst kontrolliert mehrere Objekte in einem festen Rhythmus und sorgt so für ein wirtschaftliches, aber wirksames Sicherheitskonzept.",
+  "Unsere mobilen Sicherheitskräfte fahren vereinbarte Kontrollpunkte regelmäßig ab und reagieren umgehend bei Auffälligkeiten oder Alarmauslösungen.",
+];
 const features = [
-    { title: "Regelmäßige Kontrollfahrten", desc: "Feste Streifenrhythmen für mehrere Objekte." },
-    { title: "Reaktion auf Alarmauslösungen", desc: "Schnelles Eingreifen bei sicherheitsrelevanten Ereignissen." },
-    { title: "Dokumentierte Kontrollgänge", desc: "Nachvollziehbarkeit durch digitale Protokollierung." },
-    { title: "Wirtschaftliche Sicherheitslösung", desc: "Effiziente Alternative zur durchgehenden Objektbewachung." }
-  ];
+  {
+    title: "Regelmäßige Kontrollfahrten",
+    desc: "Feste Streifenrhythmen für mehrere Objekte.",
+  },
+  {
+    title: "Reaktion auf Alarmauslösungen",
+    desc: "Schnelles Eingreifen bei sicherheitsrelevanten Ereignissen.",
+  },
+  {
+    title: "Dokumentierte Kontrollgänge",
+    desc: "Nachvollziehbarkeit durch digitale Protokollierung.",
+  },
+  {
+    title: "Wirtschaftliche Sicherheitslösung",
+    desc: "Effiziente Alternative zur durchgehenden Objektbewachung.",
+  },
+];
 const badge = "Neu für Royall";
 ---
+
 <Layout title="Revier- und Streifendienst | Royall Service & Security">
   <Header />
-  <ServiceDetailLayout kicker={kicker} title={title} intro={intro} features={features} badge={badge} />
+  <ServiceDetailLayout
+    kicker={kicker}
+    title={title}
+    intro={intro}
+    features={features}
+    badge={badge}
+  />
   <Footer />
 </Layout>

@@ -7,19 +7,38 @@ import ServiceDetailLayout from "../../components/ServiceDetailLayout.astro";
 const kicker = "Schutz für Baustellen und Baumaterial";
 const title = "Baustellenbewachung";
 const intro = [
-    "Baustellen sind besonders in den Abend- und Nachtstunden anfällig für Diebstahl und Vandalismus. Unsere Baustellenbewachung schützt Baumaterial, Maschinen und die Baustelle selbst zuverlässig vor unbefugtem Zugriff.",
-    "Wir passen die Bewachung flexibel an den Baufortschritt und die jeweilige Risikolage an, damit Ihr Bauvorhaben termingerecht und ohne Ausfälle fortgesetzt werden kann."
-  ];
+  "Baustellen sind besonders in den Abend- und Nachtstunden anfällig für Diebstahl und Vandalismus. Unsere Baustellenbewachung schützt Baumaterial, Maschinen und die Baustelle selbst zuverlässig vor unbefugtem Zugriff.",
+  "Wir passen die Bewachung flexibel an den Baufortschritt und die jeweilige Risikolage an, damit Ihr Bauvorhaben termingerecht und ohne Ausfälle fortgesetzt werden kann.",
+];
 const features = [
-    { title: "Nacht- und Wochenendbewachung", desc: "Schutz außerhalb der regulären Bauzeiten." },
-    { title: "Kontrolle von Baumaterial und Maschinen", desc: "Reduziertes Diebstahlrisiko auf der Baustelle." },
-    { title: "Flexible Einsatzplanung", desc: "Anpassung an Baufortschritt und Risikolage." },
-    { title: "Dokumentation der Kontrollgänge", desc: "Nachvollziehbare Berichte für Ihre Unterlagen." }
-  ];
+  {
+    title: "Nacht- und Wochenendbewachung",
+    desc: "Schutz außerhalb der regulären Bauzeiten.",
+  },
+  {
+    title: "Kontrolle von Baumaterial und Maschinen",
+    desc: "Reduziertes Diebstahlrisiko auf der Baustelle.",
+  },
+  {
+    title: "Flexible Einsatzplanung",
+    desc: "Anpassung an Baufortschritt und Risikolage.",
+  },
+  {
+    title: "Dokumentation der Kontrollgänge",
+    desc: "Nachvollziehbare Berichte für Ihre Unterlagen.",
+  },
+];
 const badge = "Neu für Royall";
 ---
+
 <Layout title="Baustellenbewachung | Royall Service & Security">
   <Header />
-  <ServiceDetailLayout kicker={kicker} title={title} intro={intro} features={features} badge={badge} />
+  <ServiceDetailLayout
+    kicker={kicker}
+    title={title}
+    intro={intro}
+    features={features}
+    badge={badge}
+  />
   <Footer />
 </Layout>

@@ -7,19 +7,38 @@ import ServiceDetailLayout from "../../components/ServiceDetailLayout.astro";
 const kicker = "Zuverlässiger Schutz für Ihr Firmengelände";
 const title = "Objekt- und Werkschutz";
 const intro = [
-    "Ihr Firmengelände und Ihre Gebäude verdienen zuverlässigen Schutz, rund um die Uhr. Mit unserem Objekt- und Werkschutz sichern wir Ihre Immobilie gegen unbefugten Zutritt, Diebstahl und Vandalismus.",
-    "Unser geschultes Sicherheitspersonal übernimmt Zutrittskontrollen, Streifengänge und die Überwachung technischer Anlagen, individuell abgestimmt auf Ihr Objekt."
-  ];
+  "Ihr Firmengelände und Ihre Gebäude verdienen zuverlässigen Schutz, rund um die Uhr. Mit unserem Objekt- und Werkschutz sichern wir Ihre Immobilie gegen unbefugten Zutritt, Diebstahl und Vandalismus.",
+  "Unser geschultes Sicherheitspersonal übernimmt Zutrittskontrollen, Streifengänge und die Überwachung technischer Anlagen, individuell abgestimmt auf Ihr Objekt.",
+];
 const features = [
-    { title: "Zutritts- und Zufahrtskontrolle", desc: "Kontrollierter Zugang für Mitarbeitende und Besucher." },
-    { title: "Regelmäßige Kontrollgänge", desc: "Sichtbare Präsenz zur Abschreckung und schnellen Reaktion." },
-    { title: "Überwachung technischer Anlagen", desc: "Kontrolle sicherheitsrelevanter Systeme vor Ort." },
-    { title: "24/7-Einsatzbereitschaft", desc: "Schutz auch außerhalb regulärer Geschäftszeiten." }
-  ];
+  {
+    title: "Zutritts- und Zufahrtskontrolle",
+    desc: "Kontrollierter Zugang für Mitarbeitende und Besucher.",
+  },
+  {
+    title: "Regelmäßige Kontrollgänge",
+    desc: "Sichtbare Präsenz zur Abschreckung und schnellen Reaktion.",
+  },
+  {
+    title: "Überwachung technischer Anlagen",
+    desc: "Kontrolle sicherheitsrelevanter Systeme vor Ort.",
+  },
+  {
+    title: "24/7-Einsatzbereitschaft",
+    desc: "Schutz auch außerhalb regulärer Geschäftszeiten.",
+  },
+];
 const badge = "Neu für Royall";
 ---
+
 <Layout title="Objekt- und Werkschutz | Royall Service & Security">
   <Header />
-  <ServiceDetailLayout kicker={kicker} title={title} intro={intro} features={features} badge={badge} />
+  <ServiceDetailLayout
+    kicker={kicker}
+    title={title}
+    intro={intro}
+    features={features}
+    badge={badge}
+  />
   <Footer />
 </Layout>
