@@ -72,8 +72,8 @@
 </section>
 
 <script>
-  const form = document.getElementById("contact-form");
-  const status = document.getElementById("form-status");
+  const form = document.getElementById("contact-form") as HTMLFormElement;
+  const status = document.getElementById("form-status") as HTMLFormElement;
   form?.addEventListener("submit", async (e) => {
     e.preventDefault();
     const fd = new FormData(form);
