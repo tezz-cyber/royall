@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+import logo from "../assets/royall-service-security-logo.svg";
+
 const gebaudereinigung = [
   { href: "/gebaudereinigung/unterhaltsreinigung", label: "Unterhaltsreinigung" },
   { href: "/gebaudereinigung/glasreinigung", label: "Glasreinigung" },
@@ -42,8 +45,11 @@ const menus = [
 <header class="sticky top-0 z-50 bg-royall-dark text-white shadow-md">
   <div class="max-w-6xl mx-auto flex items-center justify-between px-4 md:px-6 py-3 gap-4">
     <a href="/" class="flex items-center gap-2 shrink-0">
-      <span class="w-9 h-9 rounded-md bg-royall-gold text-royall-dark font-bold flex items-center justify-center text-sm">R</span>
-      <span class="text-lg font-bold tracking-wide whitespace-nowrap">ROYALL</span>
+      <img
+        src="/src/assets/royall-service-security-logo.svg"
+        alt="Royall Service & Security"
+        class="h-18 w-auto md:h-18"
+      />
     </a>
     <nav class="hidden lg:flex items-center gap-5 text-sm font-medium">
       {menus.map((m) => (
