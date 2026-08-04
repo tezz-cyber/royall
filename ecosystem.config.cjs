@@ -6,7 +6,7 @@ module.exports = {
       cwd: "/var/www/royall.meinedomain.com/app",
       env: {
         HOST: "127.0.0.1",
-        PORT: 4321,
+        PORT: 4322,
         NODE_ENV: "production",
         SMTP_HOST: "smtp.example.com",
         SMTP_PORT: "587",
