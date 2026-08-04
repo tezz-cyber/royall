@@ -3,7 +3,7 @@ module.exports = {
     {
       name: "royall",
       script: "./dist/server/entry.mjs",
-      cwd: "/var/www/royall.meinedomain.com/app",
+      cwd: "/var/www/royall.visionaierp.com/app",
       env: {
         HOST: "127.0.0.1",
         PORT: 4322,
