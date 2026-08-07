@@ -3,7 +3,7 @@ module.exports = {
     {
       name: "royall",
       script: "./dist/server/entry.mjs",
-      cwd: "/var/www/royall.visionaierp.com/app",
+      cwd: "/var/www/royall.ssd-de/app",
       env: {
         HOST: "127.0.0.1",
         PORT: 4322,
@@ -12,8 +12,8 @@ module.exports = {
         SMTP_PORT: "587",
         SMTP_USER: "info@royall-example.de",
         SMTP_PASS: "changeme",
-        CONTACT_RECEIVER: "info@royall-example.de"
-      }
-    }
-  ]
+        CONTACT_RECEIVER: "info@royall-example.de",
+      },
+    },
+  ],
 };
