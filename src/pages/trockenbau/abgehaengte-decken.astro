@@ -3,6 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import ServiceDetailLayout from "../../components/ServiceDetailLayout.astro";
+import deckaufhaengenImg from "../../assets/bilder/trockenbau/deckaufhaengen.avif";
 
 const kicker = "Moderne Deckenlösungen mit Funktion";
 const title = "Abgehängte Decken";
@@ -39,7 +40,7 @@ const badge = "Neu für Royall";
     intro={intro}
     features={features}
     badge={badge}
-    image="/bilder/trockenbau/deckaufhaengen.avif"
+    image={deckaufhaengenImg}
   />
   <Footer />
 </Layout>

@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import reiniTreppe from "../assets/bilder/gebaudereinigung/reini-treppe.jpg";
 ---
 
 <section class="bg-royall-dark text-white pb-16 md:pb-20">
@@ -18,10 +20,14 @@
   <!-- Bild-Container: breiter als der Text oben (max-w-7xl statt max-w-6xl) -->
   <div class="max-w-7xl mx-auto px-4 md:px-6">
     <div class="rounded-xl overflow-hidden shadow-lg">
-      <img
-        src="/bilder/gebaudereinigung/reini-treppe.jpg"
+      <Image
+        src={reiniTreppe}
         alt="Reinigungsteam im Treppenhaus"
         class="w-full h-[320px] sm:h-[420px] md:h-[520px] object-cover object-center"
+        loading="eager"
+        fetchpriority="high"
+        widths={[640, 1024, 1536]}
+        sizes="100vw"
       />
     </div>
   </div>

@@ -3,6 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import ServiceDetailLayout from "../../components/ServiceDetailLayout.astro";
+import bauendreinigungImg from "../../assets/bilder/gebaudereinigung/pexels-bnwtake0405-8931489.jpg";
 
 const kicker = "Bezugsfertig nach Bau- und Renovierungsarbeiten";
 const title = "Bauendreinigung";
@@ -39,7 +40,7 @@ const badge = undefined;
     intro={intro}
     features={features}
     badge={badge}
-    image="/bilder/gebaudereinigung/pexels-bnwtake0405-8931489.jpg"
+    image={bauendreinigungImg}
   />
   <Footer />
 </Layout>

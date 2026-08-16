@@ -2,27 +2,34 @@
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
+import { Image } from "astro:assets";
+
+import heroImg from "../../assets/bilder/gebaudereinigung/man-doing-professional-home-cleaning-service.jpg";
+import unterhaltImg from "../../assets/bilder/gebaudereinigung/person-taking-care-office-cleaning.jpg";
+import glasImg from "../../assets/bilder/gebaudereinigung/pexels-mikkel-jul-774849604-18885426.jpg";
+import grundImg from "../../assets/bilder/gebaudereinigung/full-shot-people-cleaning-office.jpg";
+import bauendImg from "../../assets/bilder/gebaudereinigung/full-shot-man-vacuuming-office-floor.jpg";
 
 const items = [
   {
     title: "Unterhaltsreinigung",
     desc: "Regelmäßige Reinigung von Büro- und Geschäftsräumen.",
-    img: "/bilder/gebaudereinigung/person-taking-care-office-cleaning.jpg",
+    img: unterhaltImg,
   },
   {
     title: "Glasreinigung",
     desc: "Streifenfreie Fenster, Fassaden und Glasflächen.",
-    img: "/bilder/gebaudereinigung/pexels-mikkel-jul-774849604-18885426.jpg",
+    img: glasImg,
   },
   {
     title: "Grundreinigung",
     desc: "Intensive Tiefenreinigung stark beanspruchter Flächen.",
-    img: "/bilder/gebaudereinigung/full-shot-people-cleaning-office.jpg",
+    img: grundImg,
   },
   {
     title: "Bauendreinigung",
     desc: "Bezugsfertige Reinigung nach Bau- und Renovierungsarbeiten.",
-    img: "/bilder/gebaudereinigung/full-shot-man-vacuuming-office-floor.jpg",
+    img: bauendImg,
   },
 ];
 ---
@@ -50,10 +57,14 @@ const items = [
         </p>
       </div>
       <div class="h-64 md:h-80 rounded-xl overflow-hidden">
-        <img
-          src="/bilder/gebaudereinigung/man-doing-professional-home-cleaning-service.jpg"
+        <Image
+          src={heroImg}
           alt="Team bei der Gebäudereinigung"
           class="w-full h-full object-cover"
+          loading="eager"
+          fetchpriority="high"
+          widths={[500, 800, 1200]}
+          sizes="(max-width: 768px) 100vw, 50vw"
         />
       </div>
     </div>
@@ -74,11 +85,15 @@ const items = [
       {
         items.map((i) => (
           <div class="rounded-xl overflow-hidden shadow-sm border border-gray-100">
-            <div class="h-76 bg-royall-light flex items-center justify-center text-gray-400 text-sm">
-              <img
-                src={i.img || "/bilder/gebaudereinigung/reini-treppe.jpg"}
+            <div class="h-76">
+              <Image
+                src={i.img}
                 alt={i.title}
                 class="w-full h-full object-cover object-center"
+                loading="lazy"
+                decoding="async"
+                widths={[300, 500, 700]}
+                sizes="(max-width: 640px) 100vw, 50vw"
               />
             </div>
             <div class="p-5">

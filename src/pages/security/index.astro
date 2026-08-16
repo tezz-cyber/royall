@@ -3,16 +3,23 @@ import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import ServiceTile from "../../components/ServiceTile.astro";
 import Footer from "../../components/Footer.astro";
+
+import objektschutzImg from "../../assets/bilder/security/objektschutz.jpg";
+import baustellenbewachungImg from "../../assets/bilder/security/baustellenbewachung.jpg";
+import veranstaltungsschutzImg from "../../assets/bilder/security/veranstaltungsueberwachung.jpg";
+import revierStreifendienstImg from "../../assets/bilder/security/revier-streifendienst.png";
+import brandwacheImg from "../../assets/bilder/security/brandwache.png";
+
 const items = [
   {
     title: "Objekt- und Werkschutz",
     href: "/security/objekt-werkschutz",
-    img: "/bilder/security/objektschutz.jpg",
+    img: objektschutzImg,
   },
   {
     title: "Baustellenbewachung",
     href: "/security/baustellenbewachung",
-    img: "/bilder/security/baustellenbewachung.jpg",
+    img: baustellenbewachungImg,
   },
   /* {
     title: "Empfangs- und Pfortendienst",
@@ -21,17 +28,17 @@ const items = [
   {
     title: "Veranstaltungsschutz",
     href: "/security/veranstaltungsschutz",
-    img: "/bilder/security/veranstaltungsueberwachung.jpg",
+    img: veranstaltungsschutzImg,
   },
   {
     title: "Revier- und Streifendienst",
     href: "/security/revier-streifendienst",
-    img: "/bilder/security/revier-streifendienst.png",
+    img: revierStreifendienstImg,
   },
   {
     title: "Brandwache",
     href: "/security/brandwache",
-    img: "/bilder/security/brandwache.png",
+    img: brandwacheImg,
   },
 ];
 ---

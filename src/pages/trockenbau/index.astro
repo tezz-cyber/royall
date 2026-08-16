@@ -3,32 +3,39 @@ import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import ServiceTile from "../../components/ServiceTile.astro";
 import Footer from "../../components/Footer.astro";
+
+import trennwandImg from "../../assets/bilder/trockenbau/trennwand.jpg";
+import deckenImg from "../../assets/bilder/trockenbau/deckaufhaengen.avif";
+import dachgeschossImg from "../../assets/bilder/trockenbau/dachgeschossausbau.jpg";
+import daemmungImg from "../../assets/bilder/trockenbau/daemmung-schallschutz.avif";
+import spachtelImg from "../../assets/bilder/trockenbau/spachtelarbeiten.jpg";
+
 const items = [
   {
     title: "Trennwände",
     href: "/trockenbau/trennwaende",
-    img: "/bilder/trockenbau/trennwand.jpg",
+    img: trennwandImg,
   },
   {
     title: "Abgehängte Decken",
     href: "/trockenbau/abgehaengte-decken",
-    img: "/bilder/trockenbau/deckaufhaengen.avif",
+    img: deckenImg,
   },
   {
     title: "Dachgeschossausbau",
     href: "/trockenbau/dachgeschossausbau",
-    img: "/bilder/trockenbau/dachgeschossausbau.jpg",
+    img: dachgeschossImg,
   },
   /* { title: "Vorsatzschalen", href: "/trockenbau/vorsatzschalen" }, */
   {
     title: "Dämmung & Schallschutz",
     href: "/trockenbau/daemmung-schallschutz",
-    img: "/bilder/trockenbau/daemmung-schallschutz.avif",
+    img: daemmungImg,
   },
   {
     title: "Spachtelarbeiten",
     href: "/trockenbau/spachtelarbeiten",
-    img: "/bilder/trockenbau/spachtelarbeiten.jpg",
+    img: spachtelImg,
   },
 ];
 ---
@@ -42,7 +49,11 @@ const items = [
     >
     <h1 class="text-3xl font-bold mb-10">Trockenbau</h1>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-      {items.map((s) => <ServiceTile title={s.title} href={s.href} img={s.img} />)}
+      {
+        items.map((s) => (
+          <ServiceTile title={s.title} href={s.href} img={s.img} />
+        ))
+      }
     </div>
   </section>
   <Footer />

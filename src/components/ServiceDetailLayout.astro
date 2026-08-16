@@ -1,4 +1,8 @@
 ---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import defaultImage from "../assets/bilder/gebaudereinigung/reini-treppe.jpg";
+
 export interface Feature {
   title: string;
   desc: string;
@@ -9,7 +13,7 @@ export interface Props {
   intro: string[];
   features: Feature[];
   badge?: string;
-  image?: string;
+  image?: ImageMetadata;
 }
 const { kicker, title, intro, features, badge, image } = Astro.props;
 ---
@@ -26,13 +30,15 @@ const { kicker, title, intro, features, badge, image } = Astro.props;
   <h1 class="text-2xl md:text-4xl font-bold mb-8">{title}</h1>
 
   <div class="grid md:grid-cols-2 gap-8 items-start mb-12">
-    <div
-      class="h-56 md:h-72 bg-royall-light rounded-xl flex items-center justify-center text-gray-400 text-sm order-1 md:order-2"
-    >
-      <img
-        src={image || "/bilder/gebaudereinigung/reini-treppe.jpg"}
+    <div class="h-56 md:h-72 rounded-xl overflow-hidden order-1 md:order-2">
+      <Image
+        src={image || defaultImage}
         alt={title}
         class="w-full h-full object-cover"
+        loading="eager"
+        fetchpriority="high"
+        widths={[400, 800, 1200]}
+        sizes="(max-width: 768px) 100vw, 50vw"
       />
     </div>
     <div class="order-2 md:order-1 flex flex-col gap-4">

@@ -2,12 +2,18 @@
 import Layout from "../../layouts/Layout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
+import { Image } from "astro:assets";
+
+import heroImg from "../../assets/bilder/gebaudeservice/pexels-bulat843-1243575272-38524262.jpg";
+import hausmeisterImg from "../../assets/bilder/gebaudeservice/istockphoto-1282328221-612x612.jpg";
+import gruenflaechenImg from "../../assets/bilder/gebaudeservice/pexels-marianna-zuzanna-498248397-16442678.jpg";
+import teppichImg from "../../assets/bilder/gebaudeservice/pexels-michelangelo-buonarroti-4176235.jpg";
 
 const items = [
   {
     title: "Hausmeisterservice",
     desc: "Technische und organisatorische Betreuung Ihrer Immobilie.",
-    img: "/bilder/gebaudeservice/istockphoto-1282328221-612x612.jpg",
+    img: hausmeisterImg,
   },
   /* {
     title: "Schädlingsbekämpfung",
@@ -16,12 +22,12 @@ const items = [
   {
     title: "Grünflächenpflege",
     desc: "Pflege von Rasenflächen, Hecken und Außenanlagen.",
-    img: "/bilder/gebaudeservice/pexels-marianna-zuzanna-498248397-16442678.jpg",
+    img: gruenflaechenImg,
   },
   {
     title: "Teppichreinigung",
     desc: "Schonende Tiefenreinigung textiler Bodenbeläge.",
-    img: "/bilder/gebaudeservice/pexels-michelangelo-buonarroti-4176235.jpg",
+    img: teppichImg,
   },
 ];
 ---
@@ -43,13 +49,15 @@ const items = [
         kümmern.
       </p>
     </div>
-    <div
-      class="h-68 md:h-64 bg-white/5 flex items-center justify-center text-gray-400 text-sm"
-    >
-      <img
-        src="/bilder/gebaudeservice/pexels-bulat843-1243575272-38524262.jpg"
+    <div class="h-68 md:h-64">
+      <Image
+        src={heroImg}
         alt="Gebäudeservice"
         class="w-full h-full object-cover object-center"
+        loading="eager"
+        fetchpriority="high"
+        widths={[640, 1024, 1536]}
+        sizes="100vw"
       />
     </div>
   </section>
@@ -68,11 +76,15 @@ const items = [
       {
         items.map((i) => (
           <div class="rounded-xl overflow-hidden shadow-sm border border-gray-100">
-            <div class="h-36 bg-royall-light flex items-center justify-center text-gray-400 text-sm">
-              <img
-                src={i.img || "/bilder/gebaudeservice/reini-treppe.jpg"}
+            <div class="h-36">
+              <Image
+                src={i.img}
                 alt={i.title}
                 class="w-full h-full object-cover object-center"
+                loading="lazy"
+                decoding="async"
+                widths={[300, 500, 700]}
+                sizes="(max-width: 640px) 100vw, 50vw"
               />
             </div>
             <div class="p-5">
