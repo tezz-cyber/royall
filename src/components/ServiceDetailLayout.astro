@@ -9,8 +9,9 @@ export interface Props {
   intro: string[];
   features: Feature[];
   badge?: string;
+  image?: string;
 }
-const { kicker, title, intro, features, badge } = Astro.props;
+const { kicker, title, intro, features, badge, image } = Astro.props;
 ---
 
 <section class="max-w-5xl mx-auto px-4 md:px-6 py-14 md:py-20">
@@ -28,7 +29,11 @@ const { kicker, title, intro, features, badge } = Astro.props;
     <div
       class="h-56 md:h-72 bg-royall-light rounded-xl flex items-center justify-center text-gray-400 text-sm order-1 md:order-2"
     >
-      Platzhalter-Bild: {title}
+      <img
+        src={image || "/bilder/gebaudereinigung/reini-treppe.jpg"}
+        alt={title}
+        class="w-full h-full object-cover"
+      />
     </div>
     <div class="order-2 md:order-1 flex flex-col gap-4">
       {intro.map((p) => <p class="text-gray-700 leading-relaxed">{p}</p>)}

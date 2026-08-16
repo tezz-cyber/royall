@@ -4,18 +4,35 @@ import Header from "../../components/Header.astro";
 import ServiceTile from "../../components/ServiceTile.astro";
 import Footer from "../../components/Footer.astro";
 const items = [
-  { title: "Objekt- und Werkschutz", href: "/security/objekt-werkschutz" },
-  { title: "Baustellenbewachung", href: "/security/baustellenbewachung" },
   {
+    title: "Objekt- und Werkschutz",
+    href: "/security/objekt-werkschutz",
+    img: "/bilder/security/objektschutz.jpg",
+  },
+  {
+    title: "Baustellenbewachung",
+    href: "/security/baustellenbewachung",
+    img: "/bilder/security/baustellenbewachung.jpg",
+  },
+  /* {
     title: "Empfangs- und Pfortendienst",
     href: "/security/empfangs-pfortendienst",
+  }, */
+  {
+    title: "Veranstaltungsschutz",
+    href: "/security/veranstaltungsschutz",
+    img: "/bilder/security/veranstaltungsueberwachung.jpg",
   },
-  { title: "Veranstaltungsschutz", href: "/security/veranstaltungsschutz" },
   {
     title: "Revier- und Streifendienst",
     href: "/security/revier-streifendienst",
+    img: "/bilder/security/revier-streifendienst.png",
   },
-  { title: "Brandwache", href: "/security/brandwache" },
+  {
+    title: "Brandwache",
+    href: "/security/brandwache",
+    img: "/bilder/security/brandwache.png",
+  },
 ];
 ---
 
@@ -24,11 +41,15 @@ const items = [
   <section class="max-w-6xl mx-auto px-4 md:px-6 py-16 md:py-20">
     <span
       class="inline-block bg-royall-gold text-royall-dark text-xs font-semibold px-3 py-1 rounded-full mb-4"
-      >Neu für Royall</span
+      >Von Royall für Sie</span
     >
     <h1 class="text-3xl font-bold mb-10">Security</h1>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-      {items.map((s) => <ServiceTile title={s.title} href={s.href} />)}
+      {
+        items.map((s) => (
+          <ServiceTile title={s.title} href={s.href} img={s.img} />
+        ))
+      }
     </div>
   </section>
   <Footer />

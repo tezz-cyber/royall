@@ -7,18 +7,21 @@ const items = [
   {
     title: "Hausmeisterservice",
     desc: "Technische und organisatorische Betreuung Ihrer Immobilie.",
+    img: "/bilder/gebaudeservice/istockphoto-1282328221-612x612.jpg",
   },
-  {
+  /* {
     title: "Schädlingsbekämpfung",
     desc: "Fachgerechte Bekämpfung und Prävention von Schädlingsbefall.",
-  },
+  }, */
   {
     title: "Grünflächenpflege",
     desc: "Pflege von Rasenflächen, Hecken und Außenanlagen.",
+    img: "/bilder/gebaudeservice/pexels-marianna-zuzanna-498248397-16442678.jpg",
   },
   {
     title: "Teppichreinigung",
     desc: "Schonende Tiefenreinigung textiler Bodenbeläge.",
+    img: "/bilder/gebaudeservice/pexels-michelangelo-buonarroti-4176235.jpg",
   },
 ];
 ---
@@ -41,9 +44,13 @@ const items = [
       </p>
     </div>
     <div
-      class="h-48 md:h-64 bg-white/5 flex items-center justify-center text-gray-400 text-sm"
+      class="h-68 md:h-64 bg-white/5 flex items-center justify-center text-gray-400 text-sm"
     >
-      Platzhalter-Bild: Hausmeister bei der Arbeit
+      <img
+        src="/bilder/gebaudeservice/pexels-bulat843-1243575272-38524262.jpg"
+        alt="Gebäudeservice"
+        class="w-full h-full object-cover object-center"
+      />
     </div>
   </section>
 
@@ -62,7 +69,11 @@ const items = [
         items.map((i) => (
           <div class="rounded-xl overflow-hidden shadow-sm border border-gray-100">
             <div class="h-36 bg-royall-light flex items-center justify-center text-gray-400 text-sm">
-              Platzhalter-Bild: {i.title}
+              <img
+                src={i.img || "/bilder/gebaudeservice/reini-treppe.jpg"}
+                alt={i.title}
+                class="w-full h-full object-cover object-center"
+              />
             </div>
             <div class="p-5">
               <h3 class="font-semibold mb-1">{i.title}</h3>

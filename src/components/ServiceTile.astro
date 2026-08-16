@@ -2,8 +2,9 @@
 export interface Props {
   title: string;
   href: string;
+  img: string;
 }
-const { title, href } = Astro.props;
+const { title, href, img } = Astro.props;
 ---
 
 <a
@@ -13,7 +14,11 @@ const { title, href } = Astro.props;
   <div
     class="h-36 md:h-40 bg-royall-light flex items-center justify-center text-gray-400 text-sm"
   >
-    Platzhalter-Bild
+    <img
+        src={img || "/bilder/gebaudereinigung/reini-treppe.jpg"}
+        alt={title}
+        class="w-full h-full object-cover"
+      />
   </div>
   <div
     class="bg-royall-dark text-white px-4 py-3 flex items-center justify-between"

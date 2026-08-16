@@ -7,18 +7,22 @@ const items = [
   {
     title: "Unterhaltsreinigung",
     desc: "Regelmäßige Reinigung von Büro- und Geschäftsräumen.",
+    img: "/bilder/gebaudereinigung/person-taking-care-office-cleaning.jpg",
   },
   {
     title: "Glasreinigung",
     desc: "Streifenfreie Fenster, Fassaden und Glasflächen.",
+    img: "/bilder/gebaudereinigung/pexels-mikkel-jul-774849604-18885426.jpg",
   },
   {
     title: "Grundreinigung",
     desc: "Intensive Tiefenreinigung stark beanspruchter Flächen.",
+    img: "/bilder/gebaudereinigung/full-shot-people-cleaning-office.jpg",
   },
   {
     title: "Bauendreinigung",
     desc: "Bezugsfertige Reinigung nach Bau- und Renovierungsarbeiten.",
+    img: "/bilder/gebaudereinigung/full-shot-man-vacuuming-office-floor.jpg",
   },
 ];
 ---
@@ -27,24 +31,31 @@ const items = [
   <Header />
 
   <section class="relative bg-royall-dark text-white">
-    <div class="max-w-5xl mx-auto px-4 md:px-6 py-16 md:py-20">
-      <p class="text-royall-gold font-semibold mb-2">
-        Für die regelmäßige Reinigung Ihres Unternehmens
-      </p>
-      <h1 class="text-3xl md:text-4xl font-bold mb-6">Gebäudereinigung</h1>
-      <p class="text-gray-300 max-w-2xl leading-relaxed">
-        Sauberkeit schafft Vertrauen. Besonders in Arbeitsumgebungen, die
-        täglich genutzt werden. Mit unserer professionellen Unterhaltsreinigung
-        sorgen wir dafür, dass Ihre Räume stets gepflegt, hygienisch und
-        einladend bleiben. Ob Bürogebäude, Arztpraxis, Schule oder
-        Industriehalle: Wir passen die Reinigung individuell an Ihre Bedürfnisse
-        und Nutzungsfrequenzen an. Zuverlässig, gründlich und termingerecht.
-      </p>
-    </div>
     <div
-      class="h-48 md:h-64 bg-white/5 flex items-center justify-center text-gray-400 text-sm"
+      class="max-w-5xl mx-auto px-4 md:px-6 py-16 md:py-20 grid md:grid-cols-2 gap-10 items-center"
     >
-      Platzhalter-Bild: Team bei der Gebäudereinigung
+      <div>
+        <p class="text-royall-gold font-semibold mb-2">
+          Für die regelmäßige Reinigung Ihres Unternehmens
+        </p>
+        <h1 class="text-3xl md:text-4xl font-bold mb-6">Gebäudereinigung</h1>
+        <p class="text-gray-300 leading-relaxed">
+          Sauberkeit schafft Vertrauen. Besonders in Arbeitsumgebungen, die
+          täglich genutzt werden. Mit unserer professionellen
+          Unterhaltsreinigung sorgen wir dafür, dass Ihre Räume stets gepflegt,
+          hygienisch und einladend bleiben. Ob Bürogebäude, Arztpraxis, Schule
+          oder Industriehalle: Wir passen die Reinigung individuell an Ihre
+          Bedürfnisse und Nutzungsfrequenzen an. Zuverlässig, gründlich und
+          termingerecht.
+        </p>
+      </div>
+      <div class="h-64 md:h-80 rounded-xl overflow-hidden">
+        <img
+          src="/bilder/gebaudereinigung/man-doing-professional-home-cleaning-service.jpg"
+          alt="Team bei der Gebäudereinigung"
+          class="w-full h-full object-cover"
+        />
+      </div>
     </div>
   </section>
 
@@ -63,8 +74,12 @@ const items = [
       {
         items.map((i) => (
           <div class="rounded-xl overflow-hidden shadow-sm border border-gray-100">
-            <div class="h-36 bg-royall-light flex items-center justify-center text-gray-400 text-sm">
-              Platzhalter-Bild: {i.title}
+            <div class="h-76 bg-royall-light flex items-center justify-center text-gray-400 text-sm">
+              <img
+                src={i.img || "/bilder/gebaudereinigung/reini-treppe.jpg"}
+                alt={i.title}
+                class="w-full h-full object-cover object-center"
+              />
             </div>
             <div class="p-5">
               <h3 class="font-semibold mb-1">{i.title}</h3>
