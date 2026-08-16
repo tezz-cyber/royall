@@ -1,7 +1,9 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import JobsImg from "../assets/bilder/gebaudereinigung/klinik-reinigen.jpg";
 ---
 
 <Layout title="Jobs | Royall Service & Security">
@@ -11,14 +13,22 @@ import Footer from "../components/Footer.astro";
     <div
       class="h-56 md:h-72 bg-royall-light rounded-xl flex items-center justify-center text-gray-400 text-sm mb-8"
     >
-      Platzhalter-Bild: Team bei der Arbeit !!!
+      <Image
+        src={JobsImg}
+        alt="Team bei der Arbeit"
+        class="w-full h-full object-cover"
+        loading="lazy"
+        decoding="async"
+        widths={[400, 600, 900]}
+        sizes="50vw"
+      />
     </div>
     <p class="text-gray-700 max-w-2xl mx-auto mb-10">
       Wir suchen motivierte Mitarbeitende in Gebäudereinigung und
       Gebäudeservice. Quereinsteiger sind bei uns willkommen.
     </p>
     <a
-      href="mailto:jobs@royall-example.de"
+      href="mailto:info@royall-ssd.de"
       class="bg-royall-gold text-royall-dark font-semibold px-6 py-3 rounded-md hover:opacity-90 transition"
     >
       Jetzt bewerben

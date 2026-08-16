@@ -1,26 +1,82 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import unternehmenImg from "../assets/bilder/security/pexels-caleboquendo-34585117.jpg";
 ---
 
 <Layout title="Unternehmen | Royall Service & Security">
   <Header />
   <section class="max-w-4xl mx-auto px-4 md:px-6 py-16 md:py-20">
     <h1 class="text-3xl font-bold mb-6">Über uns</h1>
+
     <div
       class="h-56 md:h-72 bg-royall-light rounded-xl flex items-center justify-center text-gray-400 text-sm mb-8"
     >
-      Platzhalter-Bild: Team / Unternehmen
+      <Image
+        src={unternehmenImg}
+        alt="Mitarbeiter von Royall Service & Security"
+        class="w-full h-full object-cover"
+        loading="lazy"
+        decoding="async"
+        widths={[400, 600, 900]}
+        sizes="50vw"
+      />
     </div>
-    <p class="text-gray-700 leading-relaxed mb-4">
-      Die Royall Service & Security Dienstleistung GmbH mit Sitz in Bochum steht
-      für Zuverlässigkeit, Qualität und persönlichen Service.
-    </p>
-    <p class="text-gray-700 leading-relaxed">
-      Wir betreuen Wohn- und Gewerbeimmobilien im gesamten Ruhrgebiet und bieten
-      unseren Kunden ein breites Leistungsspektrum aus einer Hand.
-    </p>
+
+    <div class="space-y-6 text-gray-700 leading-relaxed">
+      <h2 class="text-xl font-semibold text-gray-900">
+        Royall Service & Security GmbH – Ihr Allround-Partner aus Bochum
+      </h2>
+
+      <p>
+        Suchen Sie einen vielseitigen Dienstleister für Gebäudereinigung,
+        Trockenbau, Hausmeisterdienste und Security? Die <strong
+          >Royall Service & Security GmbH</strong
+        > verbindet die Flexibilität eines jungen, familiengeführten Unternehmens
+        mit fundierter Fachkompetenz und über fünf Jahren Branchenerfahrung der Geschäftsführung.
+      </p>
+
+      <p>
+        Von unserem Hauptsitz in Bochum aus sind wir landesweit im Einsatz. Mit
+        einem starken Team von über 150 Mitarbeitenden bieten wir
+        maßgeschneiderte Lösungen für Ihre Objekte.
+      </p>
+
+      <div class="pt-4">
+        <h3 class="text-lg font-semibold text-gray-900 mb-3">
+          Unsere Stärken auf einen Blick:
+        </h3>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>
+            <strong>Vielseitiger Service:</strong> Reinigung, Trockenbau, Hausmeisterdienste
+            & Security aus einer Hand.
+          </li>
+          <li>
+            <strong>Starke Präsenz:</strong> Verwurzelt in Bochum, flexibel und einsatzbereit
+            im gesamten Bundesgebiet.
+          </li>
+          <li>
+            <strong>Erfahrenes Management:</strong> Über 5 Jahre Branchen-Expertise
+            der Unternehmensleitung.
+          </li>
+          <li>
+            <strong>Über 150 Mitarbeiter:</strong> Ein verlässliches Team für Projekte
+            jeder Größenordnung.
+          </li>
+          <li>
+            <strong>Geprüfte Qualität & Nachhaltigkeit:</strong> Klare Abläufe und
+            umweltschonender Mitteleinsatz.
+          </li>
+        </ul>
+      </div>
+
+      <p class="text-gray-700 leading-relaxed">
+        Wir betreuen Wohn- und Gewerbeimmobilien im gesamten Ruhrgebiet und
+        bieten unseren Kunden ein breites Leistungsspektrum aus einer Hand.
+      </p>
+    </div>
   </section>
   <Footer />
 </Layout>
